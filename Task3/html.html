@@ -2,15 +2,14 @@
   <head>
     <script>
       // your function goes here. Show examples of how to use the function.
-      const element= document.querySelector("bottomMenu").querySelectorAll("*")
-    
-    element.forEach(function (descendant) {
-     display(descendant.className);
-   });
-   function display(msg) {
-     var p = document.createElement("p");
-     p.innerHTML = String(msg);
-     document.body.appendChild(p);}
+      x="bottomMenu";
+      function DOMBranch(x) {
+
+const root = document.querySelector(x);
+
+return [...root.querySelectorAll('*')];
+
+}
     </script>
   </head>
   <body>
