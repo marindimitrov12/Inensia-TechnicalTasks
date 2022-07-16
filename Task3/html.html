@@ -1,15 +1,6 @@
 <html>
   <head>
-    <script>
-      // your function goes here. Show examples of how to use the function.
-      x="bottomMenu";
-      function DOMBranch(x) {
-
-const root = document.querySelector(x);
-
-return [...root.querySelectorAll('*')];
-
-}
+   
     </script>
   </head>
   <body>
@@ -58,5 +49,20 @@ return [...root.querySelectorAll('*')];
         <li><a href="#">About</a></li>
       </ul>
     </footer>
+    <script>
+      // your function goes here. Show examples of how to use the function.
+      x="#bottomMenu";
+      console.log(DOMBranch(x));
+      function DOMBranch(x) {
+
+const root = document.querySelector(x).querySelectorAll('*');
+let arr=Array.from(root);
+arr.push(document.querySelector(x));
+
+return arr;
+
+
+}
+</script>
   </body>
 </html>
